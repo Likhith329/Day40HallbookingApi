@@ -1,5 +1,6 @@
 const express = require("express");
-
+const dotenv=require('dotenv')
+dotenv.config()
 const uniqid = require('uniqid');
 
 const app = express();
@@ -7,7 +8,7 @@ app.use(express.json())
 
 
 
-app.listen(8000);
+app.listen(process.env.PORT);
 
 let rooms = [];
 let roomNo = 1;
